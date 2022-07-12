@@ -25,7 +25,7 @@ async function getdata(word) {
 
         } else {
             // Concatening all the examples of the word
-            f_example += `${c}` + " " + data[0].meanings[0].definitions[i].example + " ";   
+            f_example += `${c}.` + " " + data[0].meanings[0].definitions[i].example + " ";   
             c++
         }
         
@@ -42,8 +42,11 @@ async function getdata(word) {
         }
     
     }
+   let letter=data[0].word
+   console.log(letter.charAt(0).toUpperCase()+letter.slice(1))
+
     
-    document.querySelector(".main").innerHTML = ` <h1 id="word">${data[0].word}</h1> 
+    document.querySelector(".main").innerHTML = ` <h1 id="word">${letter.charAt(0).toUpperCase()+letter.slice(1)}</h1> 
     <h1>Meaning</h1> ${f_definition}
     
     <h1 id="change">Example</h1>${f_example}
