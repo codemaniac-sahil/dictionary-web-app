@@ -6,7 +6,8 @@
 
 }
 body{
-    background-image: linear-gradient(to right,#fb7ba2,#fce043);
+    background-color: #242424;
+    color: white;
     
 }
 .container{
@@ -18,10 +19,10 @@ body{
 }
 .search-btn{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
     margin-top: 10px;
 }
 .search-btn button{
@@ -34,13 +35,17 @@ body{
     cursor: pointer;
 }
 .search-btn input{
-    padding: 10px 0;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 0;
+    width: 80%;
 }
 .main #word{
     text-align: center;
+    font-size: 50px;
 }
 .header h1{
-    font-size: 40px;
+    font-size: 70px;
 }
 .main{
     width: 80%;
@@ -48,4 +53,70 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 1em;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+@media only screen and (max-width: 600px) {
+    .header h1{
+        font-size: 30px;
+    }
+    .search-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 10px;
+    }
+    .search-btn input{
+        padding: 10px 5px;
+        border-radius: 5px;
+        border: 0;
+    }
+    .main #word{
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 300px){
+    .header h1{
+        font-size: 10px;
+        text-align: center;
+    }
+    .search-btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        margin-top: 10px;
+        }
+        .search-btn input{
+            padding: 10px 5px;
+            border-radius: 5px;
+            border: 0;
+            width: 70%;
+        }
+        .main #word{
+            font-size: 40px;
+        }
+        audio{
+            width: 80%;
+        }
+        
+}
+@media only screen and (max-width: 712px){
+    .header h1{
+        font-size: 40px;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 200px){
+    .header h1{
+        font-size: 25px;
+        text-align: center;
+    } 
+
 }
