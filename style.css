@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-
+    box-sizing: border-box;
 }
 body{
     background-color: #242424;
@@ -102,9 +102,7 @@ body{
         .main #word{
             font-size: 40px;
         }
-        audio{
-            width: 80%;
-        }
+        
         
 }
 @media only screen and (max-width: 712px){
@@ -119,4 +117,23 @@ body{
         text-align: center;
     } 
 
+}
+#sound{
+    cursor: pointer;
+}
+@media only screen and (max-width: 287px ){
+    .header h1{
+        font-size: 25px;
+        text-align: center;
+    } 
+
+}
+@media only screen and (max-width: 185px){
+    .header h1{
+        font-size: 15px;
+        text-align: center;
+    } 
+    .main #word{
+        font-size: 20px;
+    }
 }
