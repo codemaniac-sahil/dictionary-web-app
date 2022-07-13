@@ -43,7 +43,7 @@ async function getdata(word) {
     
     }
    let letter=data[0].word
-   console.log(letter.charAt(0).toUpperCase()+letter.slice(1))
+  
 
     
     document.querySelector(".main").innerHTML = ` <h1 id="word">${letter.charAt(0).toUpperCase()+letter.slice(1)}</h1> 
@@ -52,10 +52,16 @@ async function getdata(word) {
     <h1 id="change">Example</h1>${f_example}
     
     <h1>Audio</h1>
-    <audio controls>
-    <source src=${audpath}>
-    </audio>
+    <img src="sound-svgrepo-com.svg" id="sound">
     `
+    var audio=new Audio(audpath)
     
+
+    sound=document.getElementById("sound").addEventListener(
+        'click',()=>{
+            audio.play()
+        }
+    )
+
 
 }
