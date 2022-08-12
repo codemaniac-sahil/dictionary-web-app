@@ -1,5 +1,5 @@
 # dictionary-web-app
-This is dictionary web app where user enter a word and this web app shows its meaning, examples and pronunciation.
+It is a dictionary web app in which user can search the word and get its meaning with example and correct pronunciation.
 # Languages Used 
 
 1) HTML
