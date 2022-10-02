@@ -24,32 +24,21 @@ body{
     align-items: center;
     gap: 1em;
     margin-top: 10px;
-    border-color: red;
-    border-width: 5px;
 }
 .search-btn button{
     padding: 10px 20px;
     background-color: #fb7ba2;
     color: white;
-    border: 1px solid #f5f1f4;
+    border: 0;
     border-radius: 5px;
     font-weight: bolder;
     cursor: pointer;
-    transition: .5s;
 }
-
-.search-btn :hover{
-    background-color: #f664d1;
-    color: black;
-    border-radius: 5px;
-}
-
 .search-btn input{
     padding: 10px 5px;
     border-radius: 5px;
     border: 0;
     width: 80%;
-    border: 2px solid #fb7ba2;
 }
 .main #word{
     text-align: center;
