@@ -3,6 +3,16 @@ function getmeaning() {
   let word = document.getElementById("word").value;
   getdata(word);
 }
+
+// Enter key functionality
+let input = document.getElementById("word");
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("btn").click();
+  }
+});
+
 // This function fetch the data from API and show the data on screen
 async function getdata(word) {
   var c = 1; // For counting number of examples
