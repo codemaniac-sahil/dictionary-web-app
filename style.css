@@ -1,151 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
-body{
-    background-color: #242424;
-    color: white; 
-    
+body {
+  background-color: #242424;
+  color: white;
 }
-.container{
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+.search-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 10px;
+}
+.search-btn button {
+  padding: 18px 20px;
+  background-color: #fb7ba2;
+  color: white;
+  border: 1px solid #f5f1f4;
+  border-radius: 5px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.search-btn :hover {
+  background-color: #fcdcf4;
+  color: black;
+  border-radius: 5px;
+}
+
+.search-btn input {
+  padding: 15px 5px;
+  border-radius: 5px;
+  border: 0;
+  width: 80%;
+  border: 2px solid #fb7ba2;
+  font-size: 18px;
+}
+.main #word {
+  text-align: center;
+  font-size: 50px;
+}
+.header h1 {
+  font-size: 70px;
+}
+.main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+@media only screen and (max-width: 600px) {
+  .header h1 {
+    font-size: 30px;
+  }
+  .search-btn {
     display: flex;
     flex-direction: column;
-    gap: 2em;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px;
-}
-.search-btn{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1em;
     margin-top: 10px;
-    border-color: red;
-    border-width: 5px;
-}
-.search-btn button{
-    padding: 10px 20px;
-    background-color: #fb7ba2;
-    color: white;
-    border: 1px solid #f5f1f4;
-    border-radius: 5px;
-    font-weight: bolder;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.search-btn :hover{
-    background-color: #f664d1;
-    color: black;
-    border-radius: 5px;
-}
-
-.search-btn input{
+  }
+  .search-btn input {
     padding: 10px 5px;
     border-radius: 5px;
     border: 0;
-    width: 80%;
-    border: 2px solid #fb7ba2;
-}
-.main #word{
-    text-align: center;
+  }
+  .main #word {
     font-size: 50px;
+  }
 }
-.header h1{
-    font-size: 70px;
-}
-.main{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-}
-.header{
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-}
-@media only screen and (max-width: 600px) {
-    .header h1{
-        font-size: 30px;
-    }
-    .search-btn{
+@media only screen and (max-width: 300px) {
+  .header h1 {
+    font-size: 10px;
+    text-align: center;
+  }
+  .search-btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
     margin-top: 10px;
-    }
-    .search-btn input{
-        padding: 10px 5px;
-        border-radius: 5px;
-        border: 0;
-    }
-    .main #word{
-        font-size: 50px;
-    }
+  }
+  .search-btn input {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 0;
+    width: 70%;
+  }
+  .main #word {
+    font-size: 40px;
+  }
 }
-@media only screen and (max-width: 300px){
-    .header h1{
-        font-size: 10px;
-        text-align: center;
-    }
-    .search-btn{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-        margin-top: 10px;
-        }
-        .search-btn input{
-            padding: 10px 5px;
-            border-radius: 5px;
-            border: 0;
-            width: 70%;
-        }
-        .main #word{
-            font-size: 40px;
-        }
-        
-        
+@media only screen and (max-width: 712px) {
+  .header h1 {
+    font-size: 40px;
+    text-align: center;
+  }
 }
-@media only screen and (max-width: 712px){
-    .header h1{
-        font-size: 40px;
-        text-align: center;
-    }
+@media only screen and (max-width: 200px) {
+  .header h1 {
+    font-size: 25px;
+    text-align: center;
+  }
 }
-@media only screen and (max-width: 200px){
-    .header h1{
-        font-size: 25px;
-        text-align: center;
-    } 
-
+#sound {
+  cursor: pointer;
 }
-#sound{
-    cursor: pointer;
+@media only screen and (max-width: 287px) {
+  .header h1 {
+    font-size: 25px;
+    text-align: center;
+  }
 }
-@media only screen and (max-width: 287px ){
-    .header h1{
-        font-size: 25px;
-        text-align: center;
-    } 
-
-}
-@media only screen and (max-width: 185px){
-    .header h1{
-        font-size: 15px;
-        text-align: center;
-    } 
-    .main #word{
-        font-size: 20px;
-    }
+@media only screen and (max-width: 185px) {
+  .header h1 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .main #word {
+    font-size: 20px;
+  }
 }
