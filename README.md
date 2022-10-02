@@ -32,3 +32,8 @@ Thanks a lot for spending your time helping dictionary-web-app.
 
 [![Contributors](https://contrib.rocks/image?repo=codemaniac-sahil/dictionary-web-app)](https://github.com/codemaniac-sahil/dictionary-web-app/graphs/contributors)
 
+## GitHub
+
+  
+
+dictionary-web-app is now part of GitHub. For code of conduct, please see [GitHub's Community Guidelines](https://help.github.com/en/github/site-policy/github-community-guidelines) and [Acceptable Use Policies](https://help.github.com/en/github/site-policy/github-acceptable-use-policies).
