@@ -23,38 +23,42 @@ async function getdata(word) {
 
   const response = await fetch(url);
   const data = await response.json();
+  const statusCode = await response.status;
+  if (statusCode != 200) {
+    document.querySelector(".main").innerHTML =
+      '<h1 id="invalidWord">No Result found</h1>';
+  } else {
+    for (var i = 0; i < data[0].meanings[0].definitions.length; i++) {
+      // Concatening all the meanings of the word
+      f_definition =
+        f_definition + " " + data[0].meanings[0].definitions[i].definition;
 
-  for (var i = 0; i < data[0].meanings[0].definitions.length; i++) {
-    // Concatening all the meanings of the word
-    f_definition =
-      f_definition + " " + data[0].meanings[0].definitions[i].definition;
-
-    if (data[0].meanings[0].definitions[i].example == undefined) {
-      continue;
-      c--;
-    } else {
-      // Concatening all the examples of the word
-      f_example +=
-        `${c}.` + " " + data[0].meanings[0].definitions[i].example + " ";
-      c++;
+      if (data[0].meanings[0].definitions[i].example == undefined) {
+        continue;
+        c--;
+      } else {
+        // Concatening all the examples of the word
+        f_example +=
+          `${c}.` + " " + data[0].meanings[0].definitions[i].example + " ";
+        c++;
+      }
     }
-  }
-  // When there is no examples
-  if (f_example == "") {
-    f_example = f_example + "There are no examples ";
-  }
-  // Getting Audio file path
-  for (var j = 0; j < data[0].phonetics.length; j++) {
-    if (data[0].phonetics[j].audio != "") {
-      var audpath = data[0].phonetics[j].audio;
-      break;
+    // When there is no examples
+    if (f_example == "") {
+      f_example = f_example + "There are no examples ";
     }
-  }
-  let letter = data[0].word;
+    // Getting Audio file path
+    for (var j = 0; j < data[0].phonetics.length; j++) {
+      if (data[0].phonetics[j].audio != "") {
+        var audpath = data[0].phonetics[j].audio;
+        break;
+      }
+    }
+    let letter = data[0].word;
 
-  document.querySelector(".main").innerHTML = ` <h1 id="word">${
-    letter.charAt(0).toUpperCase() + letter.slice(1)
-  }</h1> 
+    document.querySelector(".main").innerHTML = ` <h1 id="word">${
+      letter.charAt(0).toUpperCase() + letter.slice(1)
+    }</h1> 
     <h1>Meaning</h1> ${f_definition}
     
     <h1 id="change">Example</h1>${f_example}
@@ -62,9 +66,10 @@ async function getdata(word) {
     <h1>Audio</h1>
     <img src="sound-svgrepo-com.svg" id="sound">
     `;
-  var audio = new Audio(audpath);
+    var audio = new Audio(audpath);
 
-  sound = document.getElementById("sound").addEventListener("click", () => {
-    audio.play();
-  });
+    sound = document.getElementById("sound").addEventListener("click", () => {
+      audio.play();
+    });
+  }
 }
