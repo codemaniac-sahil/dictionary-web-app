@@ -65,8 +65,8 @@ async function getdata(word) {
     <h3>Meaning</h3> ${f_definition}
     </div>
     <div class="word-example-audio">
-    <h1 id="change">Example</h1>${f_example}
-    <h1>Audio</h1>
+    <h3 id="change">Example</h3>${f_example}
+    <h3>Audio</h3>
     <img src="sound-svgrepo-com.svg" id="sound">
     </div>
     </div>

@@ -77,6 +77,8 @@ body {
   justify-content: center;
 }
 .word-meaning{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:20px ;
   max-width: 50%;
   display: flex;
   flex-direction: column;
@@ -87,11 +89,12 @@ body {
   font-style: italic;
 }
 .word-example-audio{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   max-width: 50%;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 @media only screen and (max-width: 600px) {
   .header h1 {
