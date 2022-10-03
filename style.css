@@ -71,7 +71,7 @@ body {
 }
 .result {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2em;
   align-items: center;
   justify-content: center;
@@ -97,12 +97,20 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  align-items: center;
+  /* align-items: center; */
   padding: 10px 15px;
+  font-size: 20px;
 }
 
 .word-example-audio img {
   color: black;
+  width: 5%;
+}
+.audio{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
 }
 @media only screen and (max-width: 600px) {
   .header h1 {
