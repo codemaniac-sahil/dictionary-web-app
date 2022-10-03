@@ -6,7 +6,7 @@
 <div align="center">
   
 ![Issues](https://img.shields.io/github/issues/codemaniac-sahil/dictionary-web-app?color=brightgreen)
-![Pull requests](https://img.shields.io/github/issues-pr/codemaniac-sahil/dictionary-web-app?color=brigthgreen)
+![Pull requests](https://img.shields.io/github/issues-pr/codemaniac-sahil/dictionary-web?color=brigthgreen)
 ![forks](https://img.shields.io/github/forks/codemaniac-sahil/dictionary-web-app)
 ![stars](https://img.shields.io/github/stars/codemaniac-sahil/dictionary-web-app)
 
