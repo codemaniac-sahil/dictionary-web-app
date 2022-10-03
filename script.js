@@ -1,4 +1,5 @@
 // This function will execute when the button is pressed
+const myloader = document.querySelector(".loader");
 function getmeaning() {
   let word = document.getElementById("word").value;
   getdata(word);
@@ -20,9 +21,10 @@ async function getdata(word) {
   var f_example = ""; // initializing the example empty string
   // API URL
   let url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + word;
-
+  myloader.style.display = "block"; // Displaying the loader
   const response = await fetch(url);
   const data = await response.json();
+  myloader.style.display = "none"; // Hiding the loader
   const statusCode = await response.status;
   if (statusCode != 200) {
     document.querySelector(".main").innerHTML =
@@ -56,15 +58,18 @@ async function getdata(word) {
     }
     let letter = data[0].word;
 
-    document.querySelector(".main").innerHTML = ` <h1 id="word">${
-      letter.charAt(0).toUpperCase() + letter.slice(1)
-    }</h1> 
-    <h1>Meaning</h1> ${f_definition}
-    
+    document.querySelector(".main").innerHTML = ` 
+    <div class="result">
+    <div class="word-meaning">
+    <h1 id="word">${letter.charAt(0).toUpperCase() + letter.slice(1)}</h1> 
+    <h3>Meaning</h3> ${f_definition}
+    </div>
+    <div class="word-example-audio">
     <h1 id="change">Example</h1>${f_example}
-    
     <h1>Audio</h1>
     <img src="sound-svgrepo-com.svg" id="sound">
+    </div>
+    </div>
     `;
     var audio = new Audio(audpath);
 
