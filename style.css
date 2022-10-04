@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #242424;
-  color: white;
+  background-color: #d4c2c2;
+  color:rgba(19, 19, 19, 0.932);
 }
 .container {
   display: flex;
@@ -27,27 +27,27 @@ body {
 }
 .search-btn button {
   padding: 18px 20px;
-  background-color: #fb7ba2;
+  background-color: #998d91;
   color: white;
   border: 1px solid #f5f1f4;
-  border-radius: 5px;
+  border-radius: 50px;
   font-weight: bolder;
   cursor: pointer;
   transition: 0.5s;
 }
 
 .search-btn :hover {
-  background-color: #fcdcf4;
-  color: black;
-  border-radius: 5px;
+  background-color: #000000;
+  color: rgb(255, 251, 251);
+  border-radius: 50px;
 }
 
 .search-btn input {
   padding: 15px 5px;
-  border-radius: 5px;
+  border-radius: 50px;
   border: 0;
   width: 80%;
-  border: 2px solid #fb7ba2;
+  border: 2px solid #8a7f82;
   font-size: 18px;
 }
 .main #word {
@@ -103,7 +103,7 @@ body {
 }
 
 .word-example-audio img {
-  color: black;
+  color: rgb(0, 0, 0);
   width: 5%;
 }
 .audio{
