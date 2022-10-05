@@ -1,7 +1,16 @@
 // This function will execute when the button is pressed
 const myloader = document.querySelector(".loader");
+
+function clearOnFocus(obj) {
+  obj.value = "";
+}
+
 function getmeaning() {
   let word = document.getElementById("word").value;
+  if (!word) {
+    document.getElementById("word").value = "Please enter a word to search !!";
+    return;
+  }
   getdata(word);
 }
 
@@ -68,7 +77,7 @@ async function getdata(word) {
     <h3 id="change">Example</h3>${f_example}
     <div class="audio">
     <h3>Audio</h3>
-    <img src="sound-svgrepo-com.svg" id="sound">
+    <img src="./assets/sound-svgrepo-com.svg" id="sound">
     </div>
     </div>
     </div>

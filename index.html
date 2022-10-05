@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> -->
     <title>Dictionary Web App</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="header">
-            <h1>RapidDicto.com</h1>
-            <div class="search-btn">
-                <input type="text" placeholder="Enter the word" name="" id="word" size="40">
-                <button onclick="getmeaning()" id="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-            <div class="loader"></div>
+      <div class="header">
+        <h1>RapidDicto.com</h1>
+        <div class="search-btn">
+          <input
+            type="text"
+            placeholder="Enter the word"
+            name=""
+            id="word"
+            size="40"
+            onfocus="clearOnFocus(this);"
+          />
+          <button onclick="getmeaning()" id="btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </div>
-        <div class="main">
-        </div>
+        <div class="loader"></div>
+      </div>
+      <div class="main"></div>
     </div>
 
-    <script src="script.js"></script>
-</body>
-
+    <script src="./src/script.js"></script>
+  </body>
 </html>
