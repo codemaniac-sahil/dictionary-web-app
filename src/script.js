@@ -1,7 +1,16 @@
 // This function will execute when the button is pressed
 const myloader = document.querySelector(".loader");
+
+function clearOnFocus(obj) {
+  obj.value = "";
+}
+
 function getmeaning() {
   let word = document.getElementById("word").value;
+  if (!word) {
+    document.getElementById("word").value = "Please enter a word to search !!";
+    return;
+  }
   getdata(word);
 }
 
