@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
-}
-body {
-  background-color: #d4c2c2;
-  color:rgba(19, 19, 19, 0.932);
 }
 .container {
   display: flex;
@@ -22,33 +20,40 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  /* gap: 1em; */
   margin-top: 10px;
 }
 .search-btn button {
   padding: 18px 20px;
-  background-color: #998d91;
-  color: white;
-  border: 1px solid #f5f1f4;
-  border-radius: 50px;
+  background-color: #bcadb1;
+  color: #8a7f82;
+  border: 2px solid #8a7f82;
+  border-radius: 0px 16px 16px 0px;
   font-weight: bolder;
   cursor: pointer;
-  transition: 0.5s;
+  border-left: none;
 }
 
 .search-btn :hover {
-  background-color: #000000;
-  color: rgb(255, 251, 251);
-  border-radius: 50px;
+  color: #6d6567;
+  border: 4px solid #6d6567;
+}
+.search-btn button :hover {
+  border: none;
 }
 
 .search-btn input {
-  padding: 15px 5px;
-  border-radius: 50px;
+  padding: 15px 15px;
+  border-radius: 16px 0px 0px 16px;
   border: 0;
   width: 80%;
   border: 2px solid #8a7f82;
   font-size: 18px;
+  background-color: #bcadb1;
+}
+.search-btn input:focus{
+  outline: none;
+  border: 4px solid #6d6567;
 }
 .main #word {
   text-align: center;
@@ -56,6 +61,10 @@ body {
 }
 .header h1 {
   font-size: 70px;
+  color: #453642;
+}
+.result h3 {
+  color: #453642;
 }
 .main {
   width: 80%;
@@ -77,13 +86,13 @@ body {
   justify-content: center;
 }
 .word-meaning {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1em;
-
   padding: 10px 15px;
   border-radius: 5px;
 }
@@ -91,8 +100,10 @@ body {
   font-style: italic;
   margin: auto;
 }
+
 .word-example-audio {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
+  font-family: 'Poppins', sans-serif;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -112,6 +123,7 @@ body {
   flex-direction: column;
   gap: 1em;
 }
+
 
 html, body {
   width: 100%;
@@ -134,71 +146,35 @@ body {
     100% {
         background-position: 0% 50%;
     }
-}
-@media only screen and (max-width: 600px) {
-  .header h1 {
-    font-size: 30px;
-  }
-  .search-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    margin-top: 10px;
-  }
-  .search-btn input {
-    padding: 10px 5px;
-    border-radius: 5px;
-    border: 0;
-  }
-  .main #word {
-    font-size: 50px;
-  }
-
-  .result {
-    flex-direction: column;
-  }
-
-  .word-example-audio {
-    margin-top: 10px;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .header h1 {
-    font-size: 10px;
-    text-align: center;
-  }
-  .search-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    margin-top: 10px;
-  }
-  .search-btn input {
-    padding: 10px 5px;
-    border-radius: 5px;
-    border: 0;
-    width: 70%;
-  }
-  .main #word {
-    font-size: 40px;
-  }
-}
-.loader {
+=======
+.lds-ring {
   display: none;
   margin: auto;
-  border: 10px solid #f3f3f3; /* Light grey */
-  border-top: 10px solid #3498db; /* Blue */
-  border-bottom: 10px solid #3498db;
-  border-radius: 50%;
   width: 80px;
   height: 80px;
-  animation: spin 2s linear infinite;
 }
-@keyframes spin {
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #5f4a5b;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #5f4a5b transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
   0% {
     transform: rotate(0deg);
   }
@@ -206,27 +182,98 @@ body {
     transform: rotate(360deg);
   }
 }
+#sound {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
 @media only screen and (max-width: 712px) {
+  .header h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  .header h1 {
+    font-size: 50px;
+  }
+  .search-btn {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin: auto;
+  }
+  .search-btn button {
+    padding: 13px 20px;
+    border-radius: 0px 16px 16px 0px;
+  }
+  .search-btn input {
+    padding: 10px 15px;
+    border-radius: 16px 0px 0px 16px;
+    width: 60%;
+    font-size: 18px;
+  }
+  .main #word {
+    font-size: 50px;
+    margin-bottom: 20px;
+
+  }
+
+  .result {
+    flex-direction: column;
+  }
+  .word-meaning{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .word-example-audio {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 400px) {
   .header h1 {
     font-size: 40px;
     text-align: center;
   }
+  .search-btn {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin: auto;
+  }
+  .search-btn button {
+    padding: 13px 20px;
+    border-radius: 0px 12px 12px 0px;
+  }
+  .search-btn input {
+    padding: 10px 15px;
+    border-radius: 12px 0px 0px 12px;
+    width: 70%;
+    font-size: 18px;
+  }
+
+  .main #word {
+    font-size: 40px;
+  }
 }
-@media only screen and (max-width: 200px) {
+
+@media only screen and (max-width: 330px) {
   .header h1 {
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
 }
-#sound {
-  cursor: pointer;
-}
-@media only screen and (max-width: 287px) {
-  .header h1 {
-    font-size: 25px;
-    text-align: center;
-  }
-}
+
 @media only screen and (max-width: 185px) {
   .header h1 {
     font-size: 15px;

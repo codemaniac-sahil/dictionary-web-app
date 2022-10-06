@@ -1,5 +1,5 @@
 // This function will execute when the button is pressed
-const myloader = document.querySelector(".loader");
+const myloader = document.querySelector(".lds-ring");
 
 function clearOnFocus(obj) {
   obj.value = "";
