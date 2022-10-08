@@ -72,14 +72,22 @@ async function getdata(word) {
     document.querySelector(".main").innerHTML = ` 
     <div class="result">
     <div class="word-meaning">
-    <h1 id="word">${letter.charAt(0).toUpperCase() + letter.slice(1)}</h1> 
-    <h3>Meaning</h3> ${f_definition}
+    <div class="word-wrapper">
+    <h1 class="word">${letter.charAt(0).toUpperCase() + letter.slice(1)}</h1>
+    <img src="./assets/sound-svgrepo-com.svg" id="sound">
+    </div>
+    <h3>Meaning</h3>
+    <div class="definition">
+    ${f_definition}
+    </div>
     </div>
     <div class="word-example-audio">
-    <h3 id="change">Example</h3>${f_example}
+    <h3 id="change">Example</h3>
+    <div class="example">
+    ${f_example}
+    </div>
     <div class="audio">
-    <h3>Audio</h3>
-    <img src="./assets/sound-svgrepo-com.svg" id="sound">
+    
     </div>
     </div>
     </div>
