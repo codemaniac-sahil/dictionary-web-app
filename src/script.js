@@ -54,20 +54,31 @@ async function getdata(word) {
     alert("Please enter a valid alphabet or word")
     '</h1>';
   } else {
-    for (var i = 0; i < data[0].meanings[0].definitions.length; i++) {
-      // Concatening all the meanings of the word
-      f_definition =
-        f_definition + " " + data[0].meanings[0].definitions[i].definition;
+    for(var i=0; i < data[0].meanings.length; i++){
+      const partOfSpeech = data[0].meanings[i].partOfSpeech
+      console.log(data[0].meanings.length);
+      // const partOfSpeech = "noun"
+      f_definition = 
+        f_definition + "<li><h4>" + partOfSpeech + "</h4></li><ol>"
+      f_example = 
+        f_example + "<li><h4>" + partOfSpeech + "</h4></li><ol>"
+      for (var j = 0; j < data[0].meanings[0].definitions.length; j++){
+        f_definition = 
+          f_definition + "<li>" + data[0].meanings[0].definitions[j].definition + "</li>"
 
-      if (data[0].meanings[0].definitions[i].example == undefined) {
-        continue;
-        c--;
-      } else {
-        // Concatening all the examples of the word
-        f_example +=
-          `${c}.` + " " + data[0].meanings[0].definitions[i].example + " ";
-        c++;
+        if (data[0].meanings[i].definitions[j].example == undefined) {
+          continue;
+          c--;
+        } else {
+          // Concatening all the examples of the word
+          f_example +=
+            "<li>" + data[0].meanings[i].definitions[j].example + "</li>";
+        }
       }
+      f_definition = 
+        f_definition + "</ol>"
+      f_example = 
+        f_example + "</ol>"
     }
     // When there is no examples
     if (f_example == "") {
@@ -91,13 +102,17 @@ async function getdata(word) {
     </div>
     <h3>Meaning</h3>
     <div class="definition">
+    <ul>
     ${f_definition}
+    </ul>
     </div>
     </div>
     <div class="word-example-audio">
     <h3 id="change">Example</h3>
     <div class="example">
+    <ul>
     ${f_example}
+    <ul>
     </div>
     <div class="audio">
     
