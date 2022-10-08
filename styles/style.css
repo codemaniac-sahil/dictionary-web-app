@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #d4c2c2;
+  background-color: #eeeeee;
   color:rgba(19, 19, 19, 0.932);
 }
 .container {
@@ -16,6 +16,25 @@ body {
   justify-content: center;
   align-items: center;
   padding-top: 60px;
+}
+//header styles
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.header h1 {
+  font-size: 45px;
+  margin: auto;
+  font-weight: 600;
+  width: fit-content;
+}
+.main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
 }
 .search-btn {
   display: flex;
@@ -27,47 +46,45 @@ body {
 }
 .search-btn button {
   padding: 18px 20px;
-  background-color: #998d91;
+  background-color: transparent;
   color: white;
-  border: 1px solid #f5f1f4;
+  border: 2px solid #6c5ce7;
   border-radius: 50px;
   font-weight: bolder;
   cursor: pointer;
   transition: 0.5s;
 }
-
+.search-btn button i{
+  color:#6c5ce7;
+}
 .search-btn :hover {
-  background-color: #000000;
-  color: rgb(255, 251, 251);
+  background-color: #ffffff;
   border-radius: 50px;
 }
 
 .search-btn input {
-  padding: 15px 5px;
+  padding: 15px 15px;
   border-radius: 50px;
   border: 0;
   width: 80%;
-  border: 2px solid #8a7f82;
+  border: 2px solid #6c5ce7;
   font-size: 18px;
 }
+.search-btn input:focus {
+    background-color: #ffffff;
+}
+
+//content styles
+
 .main #word {
   text-align: center;
   font-size: 50px;
+  font-weight: 800;
 }
-.header h1 {
-  font-size: 70px;
-}
-.main {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-}
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
+h3{
+  font-weight:600;
+  text-decoration: underline;
+  color:#475161;
 }
 .result {
   display: flex;
@@ -83,7 +100,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1em;
-
+  font-weight: 500;
+  line-height: 22px;
+  color:#475161;
   padding: 10px 15px;
   border-radius: 5px;
 }
@@ -97,9 +116,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  /* align-items: center; */
   padding: 10px 15px;
   font-size: 20px;
+  color: #475161;
 }
 
 .word-example-audio img {
@@ -108,7 +127,6 @@ body {
 }
 .audio{
   display: flex;
-  align-items: center;
   flex-direction: column;
   gap: 1em;
 }
