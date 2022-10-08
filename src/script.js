@@ -50,7 +50,7 @@ async function getdata(word) {
   const statusCode = await response.status;
   if (statusCode != 200) {
     document.querySelector(".main").innerHTML =
-      '<h1 id="invalidWord">No Result found</h1>';
+      alert("Please enter a valid alphabet or word");
   } else {
     for (var i = 0; i < data[0].meanings[0].definitions.length; i++) {
       // Concatening all the meanings of the word
