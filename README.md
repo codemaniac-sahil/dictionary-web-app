@@ -13,14 +13,18 @@
   
 </div>
 
-It is a dictionary web app in which user can search the word and get its meaning with example and correct pronunciation.
+This is a dictionary web app. Here user can search the word and get it's meaning along with example and correct pronunciation in the form of audio.
+
+# Steps To Use App
+1) Type the word on input text area provided.
+2) Click on search icon beside input area/ hit the enter key on your keyboard.
 # Languages Used 
 
 1) HTML
 2) CSS
 3) JavaScript
 
-# API used
+# API Used
 dictionaryapi.dev
 
 # Website link
