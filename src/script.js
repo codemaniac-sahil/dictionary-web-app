@@ -49,8 +49,10 @@ async function getdata(word) {
   myloader.style.display = "none"; // Hiding the loader
   const statusCode = await response.status;
   if (statusCode != 200) {
-    alert("Please enter a valid alphabet or word");
-    document.querySelector(".main").style.display = "none";
+    document.querySelector(".main").innerHTML=
+    '<h1 id="invalidWord">'
+    alert("Please enter a valid alphabet or word")
+    '</h1>';
   } else {
     for (var i = 0; i < data[0].meanings[0].definitions.length; i++) {
       // Concatening all the meanings of the word
