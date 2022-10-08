@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 .container {
-  display: flex;
+ display: flex;
   flex-direction: column;
   gap: 2em;
   justify-content: center;
