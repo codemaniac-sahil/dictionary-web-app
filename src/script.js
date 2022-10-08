@@ -1,5 +1,9 @@
 // This function will execute when the button is pressed
+
 const myloader = document.querySelector(".loader");
+
+const myloader = document.querySelector(".lds-ring");
+
 
 function clearOnFocus(obj) {
   obj.value = "";
@@ -8,10 +12,19 @@ function clearOnFocus(obj) {
 function getmeaning() {
   let word = document.getElementById("word").value;
   if (!word) {
+
     document.getElementById("word").value = "Please enter a word to search !!";
     return;
   }
   getdata(word);
+
+    document.querySelector(".main").innerHTML =
+      '<h1 id="invalidWord">Please Enter the Word</h1>';
+    return;
+  }
+  getdata(word);
+  document.getElementById("word").value = "";
+
 }
 
 // Enter key functionality

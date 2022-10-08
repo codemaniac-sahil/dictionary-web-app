@@ -24,6 +24,7 @@
             name=""
             id="word"
             size="40"
+
             onfocus="clearOnFocus(this);"
           />
           <button onclick="getmeaning()" id="btn">
@@ -31,6 +32,17 @@
           </button>
         </div>
         <div class="loader"></div>
+
+            spellcheck="true"
+            onfocus="clearOnFocus(this);"
+          />
+          <button onclick="getmeaning()" id="btn">
+            <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+          </button>
+        </div>
+        <!-- <div class="loader"></div> -->
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
       </div>
       <div class="main"></div>
     </div>
