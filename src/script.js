@@ -94,8 +94,8 @@ async function getdata(word) {
     let letter = data[0].word;
 
     document.querySelector(".main").innerHTML = ` 
-    <div class="result">
-    <div class="word-meaning">
+     <div class="result">
+     <div class="word-meaning">
     <div class="word-wrapper">
     <h1 class="word">${letter.charAt(0).toUpperCase() + letter.slice(1)}</h1>
     <img src="./assets/sound-svgrepo-com.svg" id="sound">
