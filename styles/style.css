@@ -103,11 +103,13 @@
   text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69);
 }
 .main {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  gap: 1em;
+  width: 30%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items:center;
+  gap: 0.5em;
+  margin-left: 100px;
+ 
 }
 .header {
   display: flex;
