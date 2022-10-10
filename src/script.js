@@ -36,6 +36,16 @@ input.addEventListener("keydown", (event) => {
   }
 });
 
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})
+
 // This function fetch the data from API and show the data on screen
 async function getdata(word) {
   var c = 1; // For counting number of examples
