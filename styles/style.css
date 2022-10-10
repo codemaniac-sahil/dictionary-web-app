@@ -20,19 +20,29 @@
 .search-btn {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   /* gap: 1em; */
   margin-top: 10px;
   height: 2.7em;
   width: 25em;
+  margin-left: 540px;
+  transition: ease-in;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 60px 40px -7px;
   
 }
+
 .char-color1{
-  color: #F3ED19
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color:#F3ED19;
+            text-shadow: none;
 }
 .char-color2{
-  color: #F3ED19;
+  color: transparent;
+   -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color:#F3ED19;
+            text-shadow:none ;
 }
 .search-btn button {
   /* padding: 18px 18px; */
@@ -47,15 +57,24 @@
   width: 20%;
 }
 
-.search-btn :hover {
-  background-color: white;
-}
+ .search-btn :hover {
+  transform: scale(1);
+
+} 
 .search-btn button:hover {
   border: none;
   background-color: #72de05;
   color:white;
+  border-radius: 10px;
+  transform: scale(1.1);
 }
-
+#btn{
+  color: black;
+}
+#btn :hover{
+  transform: scale(1.5);
+  box-shadow: none;
+}
 .search-btn input {
   padding: 15px 15px;
   border-radius: 10px 0px 0px 10px;
@@ -75,18 +94,22 @@
 .header h1 {
   font-size: 70px;
   color: #19F380;
+  text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69);
 }
 .result h3 {
   font-size: 1.3rem;
   color: #00FE7E;
   font-weight: 600;
+  text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69);
 }
 .main {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  gap: 1em;
+  width: 30%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items:center;
+  gap: 0.5em;
+  margin-left: 100px;
+ 
 }
 .header {
   display: flex;
@@ -98,13 +121,10 @@
   flex-direction: column;
   gap: 2em;
   justify-content: center;
-  margin-top: 95px;
-  left: 50%;
- 
 }
 .word-wrapper{
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
 }
 .word-meaning {
@@ -114,8 +134,6 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
-
-  align-items: center;
   gap: 1em;
   padding: 10px 15px;
   border-radius: 5px;
@@ -151,7 +169,6 @@
   font-size:1rem;
   color: #f5f5f5;
   margin-left: 2vw;
-  justify-content: center;
 }
 .example ul{
   list-style: none;
@@ -224,14 +241,14 @@ body {
   display: none;
   margin: auto;
   width: 80px;
-  height: 100px;
+  height: 80px;
 }
 .lds-ring div {
   box-sizing: border-box;
   display: block;
   position: absolute;
   width: 64px;
-  height: 80px;
+  height: 64px;
   margin: 8px;
   border: 8px solid #5f4a5b;
   border-radius: 50%;
@@ -265,6 +282,9 @@ body {
     font-size: 60px;
     text-align: center;
   }
+  .search-btn{
+    margin-left: 100px;
+  }
 
 }
 @media only screen and (max-width: 600px) {
@@ -279,6 +299,7 @@ body {
     align-items: center;
     margin-top: 10px;
     margin: auto;
+    margin-left: 20px;
   }
   .search-btn button {
     padding: 13px 20px;
@@ -293,7 +314,6 @@ body {
   .main #word {
     font-size: 50px;
     margin-bottom: 20px;
-    margin-top: 75px;
 
   }
 
@@ -358,24 +378,6 @@ body {
     font-size: 20px;
   }
 } 
-.middle{
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 90px;
-
-}
-.searchMiddle{
-  position: absolute;
- 
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
 .to-top {
   background: white;
   position: fixed;

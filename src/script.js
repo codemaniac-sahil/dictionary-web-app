@@ -13,7 +13,7 @@ function getmeaning() {
   let word = document.getElementById("word").value;
   if (!word) {
 
-    document.getElementById("word").value = "Please enter a word to search !!";
+    document.getElementById("word").placeholder = "Please enter a word to search !!";
     return;
   }
   getdata(word);
@@ -36,16 +36,6 @@ input.addEventListener("keydown", (event) => {
   }
 });
 
-const toTop = document.querySelector(".to-top");
-
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
-    toTop.classList.add("active");
-  } else {
-    toTop.classList.remove("active");
-  }
-})
-
 // This function fetch the data from API and show the data on screen
 async function getdata(word) {
   var c = 1; // For counting number of examples
@@ -59,10 +49,10 @@ async function getdata(word) {
   myloader.style.display = "none"; // Hiding the loader
   const statusCode = await response.status;
   if (statusCode != 200) {
-    document.querySelector(".main").innerHTML=
-    '<h1 id="invalidWord">'
-    alert("Please enter a valid alphabet or word")
-    '</h1>';
+    document.querySelector(".main").innerHTML=`
+    <h1 id="invalidWord">
+    Please enter a valid alphabet or word
+    </h1>`;
   } else {
     for(var i=0; i < data[0].meanings.length; i++){
       const partOfSpeech = data[0].meanings[i].partOfSpeech
@@ -76,13 +66,13 @@ async function getdata(word) {
         f_definition = 
           f_definition + "<li>" + data[0].meanings[0].definitions[j].definition + "</li>"
 
-        if (data[0].meanings[i].definitions[j].example == undefined) {
+        if (data[0].meanings[0].definitions[j].example == undefined) {
           continue;
-          c--;
+          
         } else {
           // Concatening all the examples of the word
           f_example +=
-            "<li>" + data[0].meanings[i].definitions[j].example + "</li>";
+            "<li>" + data[0].meanings[0].definitions[j].example + "</li>";
         }
       }
       f_definition = 
@@ -104,8 +94,8 @@ async function getdata(word) {
     let letter = data[0].word;
 
     document.querySelector(".main").innerHTML = ` 
-     <div class="result">
-     <div class="word-meaning">
+    <div class="result">
+    <div class="word-meaning">
     <div class="word-wrapper">
     <h1 class="word">${letter.charAt(0).toUpperCase() + letter.slice(1)}</h1>
     <img src="./assets/sound-svgrepo-com.svg" id="sound">
@@ -137,3 +127,15 @@ async function getdata(word) {
     });
   }
 }
+
+
+// scroll to top
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})

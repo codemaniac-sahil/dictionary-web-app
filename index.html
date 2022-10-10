@@ -14,29 +14,26 @@
   </head>
 
   <body>
-    
+    <center>
     <div class="container">
       <div class="header">
-        <h1 class="middle"><span class="char-color1 ">R</span >apid<span class="char-color2 ">D</span>icto.com</h1>
-        <div class="searchMiddle">
-         <div class="search-btn ">
-            <input
-              type="text"
-              placeholder="Enter the word"
-              name=""
-              id="word"
-              size="40"
+        <h1><span class="char-color1">R</span >apid<span class="char-color2">D</span>icto.com</h1>
+        <div class="search-btn">
+          <input
+            type="text"
+            placeholder="Enter the word"
+            name=""
+            id="word"
+            size="40"
 
-              onfocus="clearOnFocus(this);"
-              style="text-align: center;"
-            />
-            <button onclick="getmeaning()" id="btn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
+            onfocus="clearOnFocus(this);"
+            style="text-align: center;"
+          />
+          <button onclick="getmeaning()" id="btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </div>
-      </div>
-      <div class="loader"></div>
+        <div class="loader"></div>
 
             <!-- spellcheck="true"
             onfocus="clearOnFocus(this);"
@@ -44,18 +41,18 @@
           <!-- <button onclick="getmeaning()" id="btn">
             <i class="fa-solid fa-magnifying-glass fa-xl"></i>
           </button> -->
-        
+        </div>
         <!-- <div class="loader"></div> -->
         <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 
       </div>
       <div class="main"></div>
     </div>
-    <a href="#" class="to-top">
-      <i class="fas fa-chevron-up"></i>
-    </a>
-
-
+    
+  <a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+  </center>
     <script src="./src/script.js"></script>
   </body>
 </html>
