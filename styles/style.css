@@ -402,3 +402,42 @@ body {
   pointer-events: auto;
   opacity:1;
 }
+
+.footer{
+  text-align: center ;
+  background-position: 0vw;
+  background-color: transparent;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #db5e6f;
+  color: white;
+}
