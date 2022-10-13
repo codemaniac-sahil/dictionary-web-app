@@ -8,6 +8,13 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+
+.container-fluid{
+  background-color:rgb(11, 11, 11) ;
+  position: relative;
+  align-items: center;
+}
+
 .container {
  display: flex;
   flex-direction: column;
