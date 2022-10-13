@@ -56,7 +56,7 @@ async function getdata(word) {
   } else {
     for(var i=0; i < data[0].meanings.length; i++){
       const partOfSpeech = data[0].meanings[i].partOfSpeech
-      console.log(data[0].meanings.length);
+      // console.log(data[0]);
       // const partOfSpeech = "noun"
       f_definition = 
         f_definition + "<li><h4>" + partOfSpeech + "</h4></li><ol>"
@@ -79,6 +79,31 @@ async function getdata(word) {
         f_definition + "</ol>"
       f_example = 
         f_example + "</ol>"
+        
+        
+        
+        
+        if(data[0].meanings[i].antonyms.length!=0){
+          f_definition = f_definition + '<div class="antonyms"><h5> Antonyms: </h5>';
+          for(var j =0;j<data[0].meanings[i].antonyms.length;j++){
+            f_definition = 
+            f_definition + data[0].meanings[i].antonyms[j] + ", "
+          }
+          f_definition = f_definition.slice(0,f_definition.length-2);
+          f_definition = 
+          f_definition + '</div>';
+        }
+        if(data[0].meanings[i].synonyms.length!=0){
+          f_definition = f_definition + '<div class="synonyms"><h5> Synonyms: </h5>';
+          for(var j =0;j<data[0].meanings[i].synonyms.length;j++){
+            f_definition = 
+            f_definition + data[0].meanings[i].synonyms[j] + ", "
+          }
+          f_definition = f_definition.slice(0,f_definition.length-2);
+          f_definition = 
+          f_definition + '</div>';
+        }
+
     }
     // When there is no examples
     if (f_example == "") {

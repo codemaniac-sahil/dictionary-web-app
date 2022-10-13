@@ -26,7 +26,6 @@
   margin-top: 10px;
   height: 2.7em;
   width: 25em;
-  margin-left: 540px;
   transition: ease-in;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 60px 40px -7px;
   
@@ -75,6 +74,20 @@
   transform: scale(1.5);
   box-shadow: none;
 }
+.antonyms{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.antonyms h5{
+  color:rgb(16, 56, 28);
+}
+.synonyms{
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+}
+.synonyms h5{
+  color:rgb(16, 56, 28);
+}
 .search-btn input {
   padding: 15px 15px;
   border-radius: 10px 0px 0px 10px;
@@ -114,6 +127,8 @@
 .header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2em;
 }
 .result {
