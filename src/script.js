@@ -56,7 +56,7 @@ async function getdata(word) {
   } else {
     for(var i=0; i < data[0].meanings.length; i++){
       const partOfSpeech = data[0].meanings[i].partOfSpeech
-      console.log(data[0]);
+      // console.log(data[0]);
       // const partOfSpeech = "noun"
       f_definition = 
         f_definition + "<li><h4>" + partOfSpeech + "</h4></li><ol>"
