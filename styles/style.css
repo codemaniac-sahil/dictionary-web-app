@@ -8,6 +8,7 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+
 .container {
  display: flex;
   flex-direction: column;
@@ -116,13 +117,14 @@
   text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69);
 }
 .main {
-  width: 30%;
+  width: 50%;
   display: inline-flex;
   flex-direction: row;
   align-items:center;
   gap: 0.5em;
-  margin-left: 100px;
- 
+}
+.main li {
+ list-style: none;
 }
 .header {
   display: flex;
@@ -136,6 +138,15 @@
   flex-direction: column;
   gap: 2em;
   justify-content: center;
+  margin: 2rem auto;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.14);
+ -webkit- box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.14);
 }
 .word-wrapper{
   display: flex;
@@ -165,38 +176,34 @@
 .definition{
   font-size:1rem;
   color: #f5f5f5;
-  margin-left: 2vw;
+  
 }
 .definition ul{
   list-style: none;
 }
-.definition ol{
-  margin-left: 2vw;
-}
+
 .definition ol li{
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
 .definition h4{
-  color: rgb(14, 48, 24)
+  color: #19F380;
 }
 .example{
   font-size:1rem;
   color: #f5f5f5;
-  margin-left: 2vw;
+  
 }
 .example ul{
   list-style: none;
 }
-.example ol{
-  margin-left: 2vw;
-}
+
 .example ol li{
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
 .example h4{
-  color: rgb(14, 48, 24)
+  color: #19F380;
 }
 
 .word-example-audio {
