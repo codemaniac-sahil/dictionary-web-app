@@ -20,23 +20,26 @@
     <center>
     <div class="container">
       <div class="header">
-        <h1><span class="char-color1">R</span >apid<span class="char-color2">D</span>icto.com</h1>
-        <div class="search-btn">
-          <input
-            type="text"
-            placeholder="Enter the word"
-            name=""
-            id="word"
-            size="40"
-
-            onfocus="clearOnFocus(this);"
-            style="text-align: center;"
-          />
-          <button onclick="getmeaning()" id="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+        <div class="main-div">
+          <h1><span class="char-color1">R</span >apid<span class="char-color2">D</span>icto.com</h1>
+          <div class="search-btn">
+            <input
+              type="text"
+              placeholder="Enter the word"
+              name=""
+              id="word"
+              size="40"
+  
+              onfocus="clearOnFocus(this);"
+              style="text-align: center;"
+            />
+            <button onclick="getmeaning()" id="btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="loader"></div>
         </div>
-        <div class="loader"></div>
+        
 
             <!-- spellcheck="true"
             onfocus="clearOnFocus(this);"

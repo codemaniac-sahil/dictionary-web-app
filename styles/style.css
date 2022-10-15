@@ -8,6 +8,20 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+
+  .main-div{
+  
+    padding: 100px 100px;
+    
+    /* From https://css.glass */
+  background: rgba(137, 139, 128, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(5.4px);
+  box-shadow: 2px 2px 2px rgb(27, 27, 27);
+  }
+
 .container {
  display: flex;
   flex-direction: column;
