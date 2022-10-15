@@ -127,7 +127,7 @@ async function getdata(word) {
     </div>
     <h3>Meaning</h3>
     <div class="definition">
-    <ul>
+    <ul class="word-title">
     ${f_definition}
     </ul>
     </div>
