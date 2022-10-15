@@ -110,12 +110,8 @@ async function getdata(word) {
       f_example = f_example + "There are no examples ";
     }
     //Getting The Origin Of The Word
-    var f_origin="";
-    f_origin=data[0].origin;
-    if(f_origin=="")
-    {
-      f_origin=f_origin+"There are no origin for this word"
-    }
+    var f_url="";
+    f_url=data[0].sourceUrls[0];
     // Getting Audio file path
     for (var j = 0; j < data[0].phonetics.length; j++) {
       if (data[0].phonetics[j].audio != "") {
@@ -139,9 +135,9 @@ async function getdata(word) {
     </ul>
     </div>
     </div>
-    <div class="Origin">
+    <div class="Url">
     <ul>
-    ${f_origin}
+    <a class ="Urls" href=${f_url}>More Info On Word</a>
     </ul>
     </div>
     <div class="word-example-audio">
