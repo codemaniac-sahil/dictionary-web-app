@@ -109,7 +109,7 @@ async function getdata(word) {
     if (f_example == "") {
       f_example = f_example + "There are no examples ";
     }
-    //Getting The Origin Of The Word
+    //Getting The Source Url Of The Word
     var f_url="";
     f_url=data[0].sourceUrls[0];
     // Getting Audio file path
