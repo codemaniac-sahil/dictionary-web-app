@@ -11,12 +11,13 @@
 .container
   .main-div{
   
-    padding: 100px 100px;
+    padding: 100px 60px;
     
     /* From https://css.glass */
   background: rgba(137, 139, 128, 0.27);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(5.4px);
   box-shadow: 2px 2px 2px rgb(27, 27, 27);
@@ -29,7 +30,7 @@
    justify-content: center;
    align-items: left;
    padding-top: 60px;
-   padding-left: 60px;
+   /* padding-left: 60px; */
    width: 100vw;
    max-width: 100vw;
    overflow: hidden;
@@ -161,7 +162,7 @@
   padding: 1.5rem;
   border-radius: 6px;
   box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.14);
- -webkit- box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.14);
+ -webkit-box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.14);
    display: flex;
    flex-direction: column;
    gap: 2em;
