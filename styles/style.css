@@ -36,6 +36,9 @@
    overflow: hidden;
 }
 
+
+
+
 .search-btn {
    display: flex;
    flex-direction: row;
@@ -49,29 +52,32 @@
    box-shadow: rgba(0, 0, 0, 0.3) 0px 60px 40px -7px;
 }
 
-.char-color1 {
-   color: transparent;
-   -webkit-text-stroke-width: 3px;
-   -webkit-text-stroke-color: #f3ed19;
-   text-shadow: none;
+
+
+/* .char-color1{
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color:#F3ED19;
+            text-shadow: none;
 }
-.char-color2 {
-   color: transparent;
+.char-color2{
+  color: transparent;
    -webkit-text-stroke-width: 3px;
-   -webkit-text-stroke-color: #f3ed19;
-   text-shadow: none;
-}
+            -webkit-text-stroke-color:#F3ED19;
+            text-shadow:none ;
+} */
 .search-btn button {
-   /* padding: 18px 18px; */
-   background-color: #80ff00;
-   color: white;
-   border: none;
-   border-radius: 0px 10px 10px 0px;
-   /* font-weight: bolder; */
-   cursor: pointer;
-   /* border-left: none; */
-   height: 100%;
-   width: 20%;
+  /* padding: 18px 18px; */
+  background-color: #fcf8ff;
+  color: white;
+  border:none;
+  border-radius: 0px 10px 10px 0px;
+  /* font-weight: bolder; */
+  cursor: pointer;
+  /* border-left: none; */
+  height: 100%;
+  width: 20%;
+
 }
 
 .search-btn :hover {
@@ -95,15 +101,20 @@
    margin-top: 1vh;
    margin-bottom: 1vh;
 }
-.antonyms h5 {
-   color: #19f380;
+
+.antonyms h5{
+  color: rgb(154, 235, 255)
+
 }
 .synonyms {
    margin-top: 1vh;
    margin-bottom: 3vh;
 }
-.synonyms h5 {
-   color: #19f380;
+
+.synonyms h5{
+  color: rgb(154, 235, 255)
+
+
 }
 .search-btn input {
    padding: 15px 15px;
@@ -122,25 +133,43 @@
    font-size: 50px;
 }
 .header h1 {
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 70px;
+  color: #000000;
+  /* text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69); */
+}
+.result h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.3rem;
+  color: #00FE7E;
+  font-weight: 600;
+  text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69);
+}
+.main {
+  background-color: #000000;
+  opacity: 0.7;
+  width: 70%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.5em;
+  
+  padding-right: 40px;
+  /* margin-left: 100px; */
+
    font-size: 70px;
    color: #19f380;
    text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69);
 }
-.result h3 {
-   font-size: 1.3rem;
-   color: #00fe7e;
-   font-weight: 600;
-   text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69);
-}
-.main {
-  width: 50%;
-  display: inline-flex;
-  flex-direction: row;
-  align-items:center;
-  gap: 0.5em;
+
+
+ 
+
 }
 .main li {
  list-style: none;
+
 }
 .header {
    display: flex;
@@ -154,36 +183,27 @@
   flex-direction: column;
   gap: 2em;
   justify-content: center;
-  margin: 2rem auto;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  padding: 1.5rem;
-  border-radius: 6px;
-  box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.14);
- -webkit-box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.14);
-   display: flex;
-   flex-direction: column;
-   gap: 2em;
-   justify-content: center;
+
+  margin: 20px;
 }
-.word-wrapper {
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
+.word-wrapper{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .word-meaning {
-   /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
-   font-family: "Poppins", sans-serif;
-   font-size: 20px;
-   max-width: 100%;
-   display: flex;
-   flex-direction: column;
-   gap: 1em;
-   padding: 10px 15px;
-   border-radius: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 10px 15px;
+  border-radius: 5px;
+
 }
+
 .word-meaning h1 {
    font-style: italic;
    font-weight: 500;
@@ -206,7 +226,9 @@
   margin-bottom: 1vh;
 }
 .definition h4{
-  color: #19F380;
+
+  color: rgb(154, 235, 255)
+
 }
 .example{
   font-size:1rem;
@@ -222,12 +244,23 @@
   margin-bottom: 1vh;
 }
 .example h4{
-  color: #19F380;
-lumn;
-   gap: 1em;
-   /* align-items: center; */
-   padding: 10px 15px;
-   font-size: 20px;
+
+  color: rgb(154, 235, 255)
+}
+
+.word-example-audio {
+  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  /* align-items: center; */
+  padding: 10px 15px;
+  font-size: 20px;
+
+ color: #19F380;
+
 }
 
 .word-example-audio img {
@@ -465,12 +498,14 @@ body {
    opacity: 1;
 }
 
-.footer {
-   text-align: center;
-   background-position: 0vw;
-   background-color: transparent;
-   padding-bottom: 2rem;
-}
+
+.footer{
+  margin-top: 60px;
+  text-align: center ;
+  background-position: 0vw;
+  background-color: transparent;
+
+
 
 .fa {
    padding: 10px;
@@ -500,6 +535,64 @@ body {
 }
 
 .fa-instagram {
-   background: #db5e6f;
-   color: white;
+
+  background: #db5e6f;
+  color: white;
 }
+
+
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #FF4E50 50%, #F9D423 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.2;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+animation-direction:alternate-reverse;
+animation-duration:4s;
+}
+
+.bg3 {
+animation-duration:5s;
+}
+
+.content {
+background-color:rgba(255, 255, 255, 0.98);
+border-radius:.25em;
+box-shadow:0 0 .25em rgba(0,0,0,.25);
+box-sizing:border-box;
+left:50%;
+padding:10vmin;
+position:fixed;
+text-align:center;
+top:50%;
+transform:translate(-50%, -50%);
+}
+
+
+@keyframes slide {
+0% {
+  transform:translateX(-25%);
+}
+100% {
+  transform:translateX(25%);
+}
+}
+
+.word-title{
+  font-family: 'Times New Roman', Times, serif;
+  font-size:1rem;
+  text-align: left;
+}
+
+.example{
+  text-align: left;
+}
+
