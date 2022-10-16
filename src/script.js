@@ -109,6 +109,9 @@ async function getdata(word) {
     if (f_example == "") {
       f_example = f_example + "There are no examples ";
     }
+    //Getting The Source Url Of The Word
+    var f_url="";
+    f_url=data[0].sourceUrls[0];
     // Getting Audio file path
     for (var j = 0; j < data[0].phonetics.length; j++) {
       if (data[0].phonetics[j].audio != "") {
@@ -132,6 +135,11 @@ async function getdata(word) {
     </ul>
     </div>
     </div>
+    <div class="Url">
+    <ul>
+    <a class ="Urls" href=${f_url}>More Info On Word</a>
+    </ul>
+    </div>
     <div class="word-example-audio">
     <h3 id="change">Example</h3>
     <div class="example">
@@ -139,6 +147,8 @@ async function getdata(word) {
     ${f_example}
     <ul>
     </div>
+
+    <div>
     <div class="audio">
     
     </div>
