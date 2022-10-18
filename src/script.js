@@ -4,7 +4,6 @@
 
 const myloader = document.querySelector(".lds-ring");
 
-
 function clearOnFocus(obj) {
   obj.value = "";
 }
@@ -12,20 +11,18 @@ function clearOnFocus(obj) {
 function getmeaning() {
   let word = document.getElementById("word").value;
   if (!word) {
-
-    document.getElementById("word").placeholder = "Please enter a word to search !!";
+    document.getElementById("word").placeholder =
+      "Please enter a word to search !!";
     return;
   }
   getdata(word);
 
-    // document.querySelector(".main").innerHTML =
-    //   '<h1 id="invalidWord">Please Enter the Word</h1>';
-    // return;
-  }
-  // getdata(word);
-  // document.getElementById("word").value = "";
-
-
+  // document.querySelector(".main").innerHTML =
+  //   '<h1 id="invalidWord">Please Enter the Word</h1>';
+  // return;
+}
+// getdata(word);
+// document.getElementById("word").value = "";
 
 // Enter key functionality
 let input = document.getElementById("word");
@@ -49,69 +46,66 @@ async function getdata(word) {
   myloader.style.display = "none"; // Hiding the loader
   const statusCode = await response.status;
   if (statusCode != 200) {
-    document.querySelector(".main").innerHTML=`
+    document.querySelector(".main").innerHTML = `
     <h1 id="invalidWord">
     Please enter a valid alphabet or word
     </h1>`;
   } else {
-    for(var i=0; i < data[0].meanings.length; i++){
-      const partOfSpeech = data[0].meanings[i].partOfSpeech
+    for (var i = 0; i < data[0].meanings.length; i++) {
+      const partOfSpeech = data[0].meanings[i].partOfSpeech;
       // console.log(data[0]);
       // const partOfSpeech = "noun"
-      f_definition = 
-        f_definition + "<li><h4>" + partOfSpeech + "</h4></li><ol>"
-      f_example = 
-        f_example + "<li><h4>" + partOfSpeech + "</h4></li><ol>"
-      for (var j = 0; j < data[0].meanings[0].definitions.length; j++){
-        f_definition = 
-          f_definition + "<li>" + data[0].meanings[0].definitions[j].definition + "</li>"
+      f_definition =
+        f_definition +
+        "<li><h4 class='interjection'>" +
+        partOfSpeech +
+        ": </h4></li><ol>";
+      f_example = f_example + "<li><h4>" + partOfSpeech + "</h4></li><ol>";
+      for (var j = 0; j < data[0].meanings[0].definitions.length; j++) {
+        f_definition =
+          f_definition +
+          "<li> &nbsp;&nbsp;" +
+          data[0].meanings[0].definitions[j].definition +
+          "</li>";
 
         if (data[0].meanings[0].definitions[j].example == undefined) {
           continue;
-          
         } else {
           // Concatening all the examples of the word
           f_example +=
             "<li>" + data[0].meanings[0].definitions[j].example + "</li>";
         }
       }
-      f_definition = 
-        f_definition + "</ol>"
-      f_example = 
-        f_example + "</ol>"
-        
-        
-        
-        
-        if(data[0].meanings[i].antonyms.length!=0){
-          f_definition = f_definition + '<div class="antonyms"><h5> Antonyms: </h5>';
-          for(var j =0;j<data[0].meanings[i].antonyms.length;j++){
-            f_definition = 
-            f_definition + data[0].meanings[i].antonyms[j] + ", "
-          }
-          f_definition = f_definition.slice(0,f_definition.length-2);
-          f_definition = 
-          f_definition + '</div>';
-        }
-        if(data[0].meanings[i].synonyms.length!=0){
-          f_definition = f_definition + '<div class="synonyms"><h5> Synonyms: </h5>';
-          for(var j =0;j<data[0].meanings[i].synonyms.length;j++){
-            f_definition = 
-            f_definition + data[0].meanings[i].synonyms[j] + ", "
-          }
-          f_definition = f_definition.slice(0,f_definition.length-2);
-          f_definition = 
-          f_definition + '</div>';
-        }
+      f_definition = f_definition + "</ol>";
+      f_example = f_example + "</ol>";
 
+      if (data[0].meanings[i].antonyms.length != 0) {
+        f_definition =
+          f_definition + '<div class="antonyms"><h5> Antonyms: </h5>';
+        for (var j = 0; j < data[0].meanings[i].antonyms.length; j++) {
+          f_definition = f_definition + data[0].meanings[i].antonyms[j] + ", ";
+        }
+        f_definition = f_definition.slice(0, f_definition.length - 2);
+        f_definition = f_definition + "</div>";
+      }
+      if (data[0].meanings[i].synonyms.length != 0) {
+        f_definition =
+          f_definition +
+          '<br/><div class="synonyms"><h4> Synonyms: </h4>&nbsp;&nbsp;';
+        for (var j = 0; j < data[0].meanings[i].synonyms.length; j++) {
+          f_definition = f_definition + data[0].meanings[i].synonyms[j] + ", ";
+        }
+        f_definition = f_definition.slice(0, f_definition.length - 2);
+        f_definition = f_definition + "</div>";
+      }
     }
     // When there is no examples
     if (f_example == "") {
       f_example = f_example + "There are no examples ";
     }
     //Getting The Source Url Of The Word
-    var f_url="";
-    f_url=data[0].sourceUrls[0];
+    var f_url = "";
+    f_url = data[0].sourceUrls[0];
     // Getting Audio file path
     for (var j = 0; j < data[0].phonetics.length; j++) {
       if (data[0].phonetics[j].audio != "") {
@@ -131,7 +125,7 @@ async function getdata(word) {
     <h3>Meaning</h3>
     <div class="definition">
     <ul class="word-title">
-    ${f_definition}
+     ${f_definition}
     </ul>
     </div>
     </div>
@@ -163,7 +157,6 @@ async function getdata(word) {
   }
 }
 
-
 // scroll to top
 const toTop = document.querySelector(".to-top");
 
@@ -173,4 +166,4 @@ window.addEventListener("scroll", () => {
   } else {
     toTop.classList.remove("active");
   }
-})
+});
