@@ -63,10 +63,10 @@
 } */
 .search-btn button {
   /* padding: 18px 18px; */
-  background-color: #fcf8ff;
-  color: white;
+  background-color: #e3cbf5;
+  color: #cbebf5;
   border: none;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 11px 11px 0px;
   /* font-weight: bolder; */
   cursor: pointer;
   /* border-left: none; */
@@ -87,6 +87,8 @@
 }
 #btn {
   color: black;
+  border: none;
+  border-radius: 3px;
 }
 #btn :hover {
   transform: scale(1.5);
