@@ -60,7 +60,11 @@ async function getdata(word) {
         "<li><h4 class='interjection'>" +
         partOfSpeech +
         ": </h4></li><ol>";
-      f_example = f_example + "<li><h4>" + partOfSpeech + "</h4></li><ol>";
+      f_example =
+        f_example +
+        "<li><h4 class='interjection'>" +
+        partOfSpeech +
+        ": </h4></li><ol>";
       for (var j = 0; j < data[0].meanings[0].definitions.length; j++) {
         f_definition =
           f_definition +
@@ -73,7 +77,9 @@ async function getdata(word) {
         } else {
           // Concatening all the examples of the word
           f_example +=
-            "<li>" + data[0].meanings[0].definitions[j].example + "</li>";
+            "<li> &nbsp;&nbsp;" +
+            data[0].meanings[0].definitions[j].example +
+            "</li>";
         }
       }
       f_definition = f_definition + "</ol>";
