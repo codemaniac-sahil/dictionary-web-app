@@ -44,23 +44,16 @@
   /* gap: 1em; */
   margin-top: 10px;
   height: 2.7em;
-  width: 25em;
+  width: 20em;
   transition: ease-in;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 60px 40px -7px;
 }
 
-/* .char-color1{
-  color: transparent;
-  -webkit-text-stroke-width: 3px;
-            -webkit-text-stroke-color:#F3ED19;
-            text-shadow: none;
+#word {
+  border: none;
+  border-radius: 10px 0px 0px 10px;
 }
-.char-color2{
-  color: transparent;
-   -webkit-text-stroke-width: 3px;
-            -webkit-text-stroke-color:#F3ED19;
-            text-shadow:none ;
-} */
+
 .search-btn button {
   /* padding: 18px 18px; */
   background-color: #e3cbf5;
@@ -71,27 +64,26 @@
   cursor: pointer;
   /* border-left: none; */
   height: 100%;
-  width: 20%;
+  width: 25%;
 }
 
-.search-btn :hover {
-  transform: scale(1);
-}
 .search-btn button:hover {
   border: none;
   background-color: #72de05;
   color: white;
   border-radius: 10px;
-  transform: scale(1.1);
   transition: transform 0.5s ease-in-out;
 }
 #btn {
   color: black;
   border: none;
-  border-radius: 3px;
+  /*margin-left: 20px;*/
+  border-radius: 0px 10px 10px 0px;
 }
+
 #btn :hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
+  transition: transform 0.1s ease-in-out;
   box-shadow: none;
 }
 .antonyms {
