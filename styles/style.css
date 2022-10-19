@@ -172,8 +172,8 @@
   flex-direction: column;
   gap: 2em;
   justify-content: center;
-
-  margin: 20px;
+  max-width: 90%;
+  margin: 0px;
 }
 .word-wrapper {
   display: flex;
@@ -187,7 +187,7 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.3em;
   padding: 10px 15px;
   border-radius: 5px;
 }
@@ -262,14 +262,16 @@
   width: 100%;
 }
 
-html,
-body {
+html {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  overflow-x: hidden;
   background: linear-gradient(-45deg, #ff0080, #0080ff);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -574,4 +576,26 @@ body {
 
 .example {
   text-align: left;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.044)smoke;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(161, 8, 102), rgb(160, 85, 98), rgb(69, 4, 44));
+  border: 1px solid rgb(104, 6, 66);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(rgb(69, 4, 44), rgb(160, 85, 98), rgb(69, 4, 44));
+  border: 1px solid rgb(104, 6, 66);
 }
