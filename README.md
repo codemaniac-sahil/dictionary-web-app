@@ -28,7 +28,7 @@ This is a dictionary web app. Here user can search the word and get it's meaning
 dictionaryapi.dev
 
 # Website link
-https://marvelous-cajeta-57b331.netlify.app/
+https://rapid-dicto.netlify.app
 
 # Thanks to all Contributors
 
