@@ -35,7 +35,7 @@ input.addEventListener("keydown", (event) => {
 
 // This function fetch the data from API and show the data on screen
 async function getdata(word) {
-  var c = 1; // For counting number of examples
+  var c = 0; // For counting number of examples
   var f_definition = ""; // initializing the meaning empty string
   var f_example = ""; // initializing the example empty string
   // API URL
@@ -75,6 +75,7 @@ async function getdata(word) {
         if (data[0].meanings[0].definitions[j].example == undefined) {
           continue;
         } else {
+          c++;
           // Concatening all the examples of the word
           f_example +=
             "<li> &nbsp;&nbsp;" +
@@ -106,7 +107,7 @@ async function getdata(word) {
       }
     }
     // When there is no examples
-    if (f_example == "") {
+    if (c===0) {
       f_example = f_example + "There are no examples ";
     }
     //Getting The Source Url Of The Word
