@@ -135,11 +135,7 @@ async function getdata(word) {
     </ul>
     </div>
     </div>
-    <div class="Url">
-    <ul>
-    <a class ="Urls" href=${f_url}>More Info On Word</a>
-    </ul>
-    </div>
+
     <div class="word-example-audio">
     <h3 id="change">Example</h3>
     <div class="example">
@@ -147,6 +143,13 @@ async function getdata(word) {
     ${f_example}
     <ul>
     </div>
+    
+    <div class="Url">
+    <ul>
+    <a class ="Urls" href=${f_url}>More Info On Word</a>
+    </ul>
+    </div>
+    
 
     <div>
     <div class="audio">
