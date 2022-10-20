@@ -608,8 +608,9 @@ body {
 
 .word-wrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
+  margin-left: 5em;
 }
 /* width */
 ::-webkit-scrollbar {
