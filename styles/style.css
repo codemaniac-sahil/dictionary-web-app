@@ -8,6 +8,40 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+:root{
+  --primary-color: #edf2fc;
+  --secondary-color: #212121;
+  --tertiary-color:rgb(187, 74, 29);
+  --bt-color:#e3cbf5;
+  --bt-hov: rgb(248, 160, 248);
+  --bg-color:linear-gradient(-45deg, #ff0080, #0080ff);
+  --bg-img: linear-gradient(-60deg, #ff4e50 50%, #f9d423 50%);
+}
+.dark-theme{
+ 
+  --primary-color: #212121;
+  --secondary-color: #edf2fc;
+  --tertiary-color:rgb(107, 193, 214);
+  --bt-color:#3cb163;
+  --bt-hov: rgb(44, 103, 34);
+  --bg-color:linear-gradient(-45deg, #1f1f23, #104c87);
+  --bg-img: linear-gradient(-60deg, #636369 50%, #160a93 50%);
+ 
+  
+}
+
+.dark-theme #sun{
+  display: block !important;
+}
+.dark-theme #moon{
+  display: none;
+}
+.light-theme #sun{
+  display: none ;
+}
+.light-theme #moon{
+  display: block ;
+}
 
 /* .main-div{
   
@@ -56,7 +90,7 @@
 
 .search-btn button {
   /* padding: 18px 18px; */
-  background-color: #e3cbf5;
+  background-color:var(--bt-color);
   color: #cbebf5;
   border: none;
   border-radius: 0px 11px 11px 0px;
@@ -69,8 +103,8 @@
 
 .search-btn button:hover {
   border: none;
-  background-color: #72de05;
-  color: white;
+  background-color:var(--bt-hov);
+  color: var(--primary-color);
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
 }
@@ -96,7 +130,7 @@
 }
 
 .antonyms h5 {
-  color: rgb(154, 235, 255);
+  color: var(--tertiary-color);
 }
 .synonyms {
   margin-top: 1vh;
@@ -104,7 +138,7 @@
 }
 
 .synonyms h4 {
-  color: rgb(154, 235, 255);
+  color:var(--tertiary-color);
 }
 .Urls {
   color: #00fe7e;
@@ -118,6 +152,13 @@
   font-size: 1rem;
   background-color: whitesmoke;
 }
+.search-btn  input:hover {
+  border: none;
+  background-color:white;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
 .search-btn input:focus {
   outline: none;
 }
@@ -135,12 +176,12 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.3rem;
-  color: #00fe7e;
+  color: #0cd16f;
   font-weight: 600;
-  text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69);
+  text-shadow: 0px 0px 0px rgba(21, 81, 3, 0.69);
 }
 .main {
-  background-color: #000000;
+  background-color: var(--secondary-color);
   opacity: 0.7;
   width: 70%;
   display: inline-flex;
@@ -153,8 +194,8 @@
   /* margin-left: 100px; */
 
   font-size: 70px;
-  color: #19f380;
-  text-shadow: 3px 4px 7px rgba(21, 81, 3, 0.69);
+  color: #0cd16f;
+  text-shadow: 1px 1px 2px rgba(21, 81, 3, 0.69);
 }
 
 .main li {
@@ -191,18 +232,22 @@
   padding: 10px 15px;
   border-radius: 5px;
 }
+#title {
+  color:var(--secondary-color);
+}
+
 
 .word-meaning h1 {
   font-style: italic;
   font-weight: 500;
   font-size: 2.5rem;
-  color: white;
+  color:var(--tertiary-color);
   margin-right: 0.7em;
   /* margin: auto; */
 }
 .definition {
   font-size: 1rem;
-  color: #f5f5f5;
+  color: var(--primary-color);
 }
 .definition ul {
   list-style: none;
@@ -213,11 +258,11 @@
   margin-bottom: 1vh;
 }
 .definition h4 {
-  color: rgb(154, 235, 255);
+  color:var(--tertiary-color);
 }
 .example {
   font-size: 1rem;
-  color: #f5f5f5;
+  color: var(--primary-color);
 }
 .example ul {
   list-style: none;
@@ -228,7 +273,7 @@
   margin-bottom: 1vh;
 }
 .example h4 {
-  color: rgb(154, 235, 255);
+  color:var(--tertiary-color);
 }
 
 .word-example-audio {
@@ -242,7 +287,7 @@
   padding: 10px 15px;
   font-size: 20px;
 
-  color: #19f380;
+  color: #0cd16f;
 }
 
 .word-example-audio img {
@@ -254,7 +299,11 @@
   align-items: center;
   flex-direction: column;
   gap: 1em;
+  
 }
+/* #btn1 {
+  display: flex;
+} */
 #invalidWord {
   color: white;
   font-size: 1.5rem;
@@ -272,7 +321,7 @@ html {
 body {
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
   overflow-x: hidden;
-  background: linear-gradient(-45deg, #ff0080, #0080ff);
+  background: var(--bg-color);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
@@ -487,6 +536,7 @@ body {
   text-align: center;
   background-position: 0vw;
   background-color: transparent;
+  color:var(--secondary-color)
 }
 
 .fa {
@@ -521,13 +571,13 @@ body {
 }
 
 .fa-instagram {
-  background: #db5e6f;
+  background: #e41d8e;
   color: white;
 }
 
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #ff4e50 50%, #f9d423 50%);
+  background-image: var(--bg-img);
   bottom: 0;
   left: -50%;
   opacity: 0.2;
