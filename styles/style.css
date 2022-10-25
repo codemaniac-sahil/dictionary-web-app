@@ -29,6 +29,29 @@
  
   
 }
+/* #sun{
+  position:fixed;
+
+ 
+ 
+
+}
+#moon{
+  position:fixed;
+ 
+
+ 
+ 
+} */
+#btn1 {
+  position:absolute;
+  top: 15px;
+  right: 15px;
+  
+}
+
+
+
 
 .dark-theme #sun{
   display: block !important;
@@ -640,12 +663,12 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(rgb(161, 8, 102), rgb(160, 85, 98), rgb(69, 4, 44));
+  background: linear-gradient(rgb(222, 105, 15), rgb(227, 205, 168), rgb(230, 97, 8));
   border: 1px solid rgb(104, 6, 66);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(rgb(69, 4, 44), rgb(160, 85, 98), rgb(69, 4, 44));
+  background: linear-gradient(rgb(132, 62, 8), rgb(187, 162, 121), rgb(120, 51, 6));
   border: 1px solid rgb(104, 6, 66);
 }
