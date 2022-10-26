@@ -7,6 +7,18 @@ const myloader = document.querySelector(".lds-ring");
 function clearOnFocus(obj) {
   obj.value = "";
 }
+// function Dark() {
+//   var element = document.getElementsByClassName("main");
+//   element[0].classList.toggle("dark-mode");
+// }
+var btn1=document.getElementById("btn1");
+btn1.onclick = function()
+{
+  document.body.classList.toggle("dark-theme");
+ if(document.body.classList.contains("dark-theme")){
+
+}
+}
 
 function getmeaning() {
   let word = document.getElementById("word").value;
@@ -47,7 +59,7 @@ async function getdata(word) {
   const statusCode = await response.status;
   if (statusCode != 200) {
     document.querySelector(".main").innerHTML = `
-    <h1 id="invalidWord">
+    <h1 style="color: var(--primary-color)"id="invalidWord">
     Please enter a valid alphabet or word
     </h1>`;
   } else {
